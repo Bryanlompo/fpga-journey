@@ -31,4 +31,4 @@ GHDL 5.1.1 (compilateur VHDL)
 EPWave (visualisation des waveforms) 
 
 ## Prochaine étape
-Pour la prochaine étape — c'est le MUX 4:1 en structural.
+Comparateur 4 bits — trois sorties : A>B, A<B, A=B.
