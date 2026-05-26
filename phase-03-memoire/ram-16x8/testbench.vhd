@@ -18,7 +18,7 @@ architecture Behavioral of tb_RAM_16x8 is
     signal WE: STD_LOGIC:='0';
     signal addr: STD_LOGIC_VECTOR(3 downto 0):="0000";
     signal data_in: STD_LOGIC_VECTOR(7 downto 0):="00000000";
-    signal data_out:STD_LOGIC_VECTOR(7 downto 0):="00000000";
+    signal data_out:STD_LOGIC_VECTOR(7 downto 0);
     signal done : boolean := false ;
 begin 
 	uut: RAM_16x8 port map (
