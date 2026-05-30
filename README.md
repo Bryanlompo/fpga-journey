@@ -1,26 +1,36 @@
 # FPGA Journey — From Zero to Hardware Engineer
 
-A structured self-directed FPGA curriculum, built from scratch.
-Every project written by hand, simulated, and documented.
-No copying. No shortcuts.
+A structured self-directed FPGA curriculum, built from scratch. Every project
+written by hand, simulated, and documented. No copying. No shortcuts.
+
+---
 
 ## Goal
-Build the foundation for a career in FPGA and hardware security
-engineering — targeting roles at Ciena, Nokia, and AMD, and
-eventually launching a hardware security consulting agency.
+
+Build the foundation for a career in FPGA and hardware security engineering —
+targeting roles at Ciena, Nokia, and AMD, and eventually launching a hardware
+security consulting agency.
+
+---
 
 ## Tools
+
 - VHDL (behavioral and structural)
 - EDA Playground + GHDL 5.1.1 (simulation)
+- GitHub Codespaces (cocotb environment)
+- cocotb 1.8.1 (Python-based verification)
 - EPWave (waveform analysis)
 - Git / GitHub (version control)
 - Target board: Digilent Arty A7-35T (Xilinx Artix-7)
 
+---
+
 ## Progress
 
 ### Phase 01 — Combinational Logic (COMPLETE)
+
 | Project | Description | Type |
-|---|---|---|
+|---------|-------------|------|
 | Adder 4-bit | Basic behavioral adder | Behavioral |
 | 7-Segment Decoder | Hex digit to display (0-F) | Behavioral |
 | MUX 2x1 | 2-to-1 multiplexer | Behavioral |
@@ -32,8 +42,9 @@ eventually launching a hardware security consulting agency.
 | ALU 4-bit | 8 operations + zero flag | Behavioral |
 
 ### Phase 02 — Sequential Logic (COMPLETE)
+
 | Project | Description | Type |
-|---|---|---|
+|---------|-------------|------|
 | D Flip-Flop | First sequential circuit, synchronous reset | Behavioral |
 | T Flip-Flop | Toggle, frequency division principle | Behavioral |
 | JK Flip-Flop | Set / Reset / Hold / Toggle | Behavioral |
@@ -46,36 +57,56 @@ eventually launching a hardware security consulting agency.
 | Sequence Detector 1011 | Overlapping detection, 4 states | Behavioral |
 | Stopwatch | MM:SS display, first structural project | Structural |
 
-### Phase 03 — Memory and Arithmetic (in progress)
-RAM, ROM, FIFO, fixed-point multiplier, floating-point
-arithmetic, integer divider.
+### Phase 03 — Memory & Arithmetic (COMPLETE)
 
-### Upcoming
+| Project | Description | Type |
+|---------|-------------|------|
+| RAM 16x8 | Synchronous read/write, single port | Behavioral |
+| ROM 16x8 | Hardcoded data, read-only | Behavioral |
+| ROM MIF | ROM initialized from MIF file via textio | Behavioral |
+| BRAM Single-Port | Write-First mode, inferred BRAM | Behavioral |
+| BRAM Dual-Port | True Dual-Port, concurrent access via shared variable | Behavioral |
+| FIFO 8x8 | Synchronous FIFO with full/empty flags | Behavioral |
+| Shift-Add Multiplier | Sequential 8x8 multiplier, shift and add | Behavioral |
+| Sequential Divider | 8-bit Restoring Division, FSM + 9-bit accumulator | Behavioral |
+| Double Dabble | Binary to BCD converter, 8 iterations | Behavioral |
+| cocotb Intro | Python testbench replacing VHDL testbench, 5/5 pass | Verification |
+
+---
+
+## Upcoming
+
 - Phase 04 — Communication Protocols (UART, SPI, I2C, PWM)
 - Phase 05 — Video and Audio (VGA, Pong, oscilloscope)
 - Phase 06 — Processors (MIPS single-cycle, pipelined, RISC-V)
 - Phase 07 — Hardware Security (AES, side-channel analysis)
 
-## Key Milestones
+---
 
-    Phase 01 complete  ->  combinational logic mastered
-    Phase 02 complete  ->  sequential logic + FSM mastered
-    Phase 04 complete  ->  employable as junior FPGA engineer
-    Phase 06 complete  ->  strong hardware engineering profile
-    Phase 07 complete  ->  hardware security specialization
+## Key Milestones
+## Key Milestones
+Phase 01 complete  →  combinational logic mastered
+Phase 02 complete  →  sequential logic + FSM mastered
+Phase 03 complete  →  memory systems + arithmetic + Python verification
+Phase 04 complete  →  employable as junior FPGA engineer
+Phase 06 complete  →  strong hardware engineering profile
+Phase 07 complete  →  hardware security specialization
+---
 
 ## Design Philosophy
+
 Every module includes:
-- VHDL source (design.vhd)
-- Testbench (testbench.vhd)
-- Simulation waveform (waveform.png)
+
+- VHDL source (`design.vhd`)
+- Testbench (`testbench.vhd` or `test_*.py` for cocotb projects)
+- Simulation waveform (`waveform.png`)
 - README with design rationale, debug notes, and lessons learned
 
-Bugs and debugging notes are documented intentionally.
-Understanding why something fails is as important as making
-it work.
+Bugs and debugging notes are documented intentionally. Understanding why
+something fails is as important as making it work.
+
+---
 
 ## Author
-Bryan Lompo
-github.com/Bryanlompo/fpga-journey
-plomp040@uottawa.ca
+
+Bryan Lompo — github.com/Bryanlompo/fpga-journey — plomp040@uottawa.ca
